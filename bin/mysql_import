@@ -1,0 +1,5 @@
+#!/bin/bash
+source env/db.env
+bin/cli mysql -hdb -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE} "$@"
+
+#mysql --defaults-file="/tmp/tmp_OIPT5/extraparams.cnf"  --protocol=tcp --host=kitchenking-dev2.loewenstark-projekte.de --user=root --port=3306 --default-character-set=utf8 --comments --database=kitchenking_v2  < "/media/Storage/Projects/kitchenking/db/backup_after.sql"
